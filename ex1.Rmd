@@ -1,0 +1,117 @@
+---
+title: "Example1"
+author: "Celia Caballero"
+date: "12 de septiembre de 2018"
+output: 
+  html_document: 
+    theme: journal
+    toc: yes
+    toc_float: yes
+  pdf_document: 
+    keep_tex: yes
+    toc: yes
+---
+
+Chunks are used for writing code.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+For instance, this is a chunk: (we select Insert->Language)
+If we write echo=FALSE, we dont get the sourcecode.
+
+```{r, echo=FALSE}
+s = 2^3
+s+1
+```
+We can run this chunk pressing Play.
+
+
+This is another chunk.
+```{r,results='hide'}
+s+2
+```
+
+# This is a level 1 header {#first_part}
+
+This *is* some **plain** text.
+For instance, code: `conda install`
+
+## This is a level 2 header
+
+This is plain text again.
+
+$$
+\int_\Omega f(\omega)d\omega = 0.
+$$
+
+### This is a level 3 header
+
+#### 4th level
+
+##### 5th level
+
+```{r}
+data("cars")
+knitr::kable(head(cars),caption="this is a caption")
+xtable::xtable(head(cars))
+```
+
+## Markup
+
+1. This is a first item
+
+    i. subitem
+    
+    ii. other subitem
+    
+1. Second
+  
+    i) Hola
+    
+    i) Que tal
+    
+1. Third
+
+* First item
+
+    i) subitem
+    
+    i) Other subitem
+    
+    i) Another one
+
+* Second item
+
+    * subitem 1
+  
+    * subitem 2
+  
+        * subsubitem 1
+        
+            * subsubsubitem
+            
+* Third item
+
+Look, a video
+
+<iframe width="729" height="410" src="https://www.youtube.com/embed/_NMkjTkTaB0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+## A picture
+
+![caption](https://www.dictionary.com/e/wp-content/uploads/2018/03/easy-peasy-lemon-squeezy.jpg)
+
+<https://www.dictionary.com/e/slang/easy-peasy-lemon-squeezy/>
+
+[name of the link](https://www.dictionary.com/e/slang/easy-peasy-lemon-squeezy/)
+
+jump to [first part](#first_part)
+
+> this is a block quote
+
+# References
+
+
+-------
+
